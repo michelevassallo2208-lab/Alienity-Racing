@@ -8,13 +8,34 @@
 <body>
   <div class="stars"></div>
   <?php include "navbar.php"; ?>
-
   <div class="form-container">
-    <img src="logo.png" alt="Alienity Racing Logo" class="form-logo">
-    <h1>Invia la tua candidatura</h1>
-    <p class="form-subtitle">
-      Compila il modulo con le tue informazioni, il nostro staff valuterà la tua candidatura.
-    </p>
+    <div class="form-header">
+      <img src="logo.png" alt="Alienity Racing Logo" class="form-logo">
+      <h1>Invia la tua candidatura</h1>
+      <p class="form-subtitle">
+        Compila il modulo con le tue informazioni, il nostro staff valuterà la tua candidatura.
+      </p>
+    </div>
+
+    <div class="form-meta">
+      <div class="form-meta-card">
+        <span class="form-meta-label">Checklist</span>
+        <ul>
+          <li>Profilo Discord e Steam aggiornati</li>
+          <li>Disponibilità per prove con il Team Principal</li>
+          <li>Telemetrie o best lap opzionali in allegato</li>
+        </ul>
+      </div>
+      <div class="form-meta-card">
+        <span class="form-meta-label">Tempistiche</span>
+        <ul>
+          <li>Riscontro entro 48 ore</li>
+          <li>Colloquio in pista virtuale se necessario</li>
+          <li>Accesso area riservata dopo l'approvazione</li>
+        </ul>
+      </div>
+    </div>
+
     <form action="process_candidatura.php" method="POST">
       <input type="text" name="nome" placeholder="Nome completo" required>
       <input type="email" name="email" placeholder="Email" required>

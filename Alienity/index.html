@@ -9,47 +9,110 @@
 <body>
   <div class="stars"></div>
 
-  <!-- NAVBAR -->
   <nav>
     <div class="logo">
-      <img src="logo.png" alt="Alienity Logo">
+      <img src="logo.png" alt="Alienity Racing">
       <span>Alienity Racing</span>
     </div>
     <ul>
-      <li><a href="#about">Chi siamo</a></li>
-      <li><a href="candidatura.php">Invia Candidatura</a></li>
-      <li><a href="login.php">Accesso</a></li>
-      <li><a href="register.php">Registrati</a></li>
+      <li><a class="active" href="#top">Home</a></li>
+      <li><a href="#vision">Chi siamo</a></li>
+      <li><a href="#classi">Classi</a></li>
+      <li><a href="candidatura.php">Candidati</a></li>
+      <li><a href="login.php">Accedi</a></li>
     </ul>
   </nav>
 
-  <!-- HERO -->
-  <header class="hero">
-    <div class="hero-content">
-      <h1>Alienity Racing</h1>
-      <h2>Le Mans Ultimate Team</h2>
-      <p>Velocità. Strategia. Spirito competitivo.<br>Unisciti al nostro viaggio oltre i limiti.</p>
-      <div class="hero-buttons">
-        <a href="candidatura.php" class="btn">Invia Candidatura</a>
-        <a href="login.php" class="btn secondary">Accedi</a>
+  <main id="top">
+    <section class="hero">
+      <div>
+        <span class="tag">Le Mans Ultimate</span>
+        <h1>Alienity Racing</h1>
+        <h2>Precisione, strategia e velocità oltre i limiti.</h2>
+        <p>
+          Dalla Hypercar alla GT3, schieriamo un team visionario guidato da dati, disciplina e
+          collaborazione. Preparati a vivere la corsa con la massima intensità.
+        </p>
+        <div class="hero-cta">
+          <a href="candidatura.php" class="btn">Entra nel Team</a>
+          <a href="login.php" class="btn secondary">Area riservata</a>
+        </div>
       </div>
-    </div>
-  </header>
+      <div class="hero-card">
+        <h3>Programma 2025</h3>
+        <p class="muted">
+          Reclutiamo piloti, ingegneri e strategist per costruire tre squadre competitive in HY, GTE e GT3.
+          Unisciti a una struttura professionale dove ogni dettaglio conta.
+        </p>
+      </div>
+    </section>
 
-  <!-- ABOUT -->
-  <section class="about" id="about">
-    <h3>Chi siamo</h3>
-    <div class="card">
-      <p>
-        Alienity Racing è un team nato dalla passione per la velocità e il mistero.
-        Puntiamo a dominare Le Mans Ultimate con professionalità, dedizione e un'identità unica.
-      </p>
-    </div>
-  </section>
+    <section id="vision">
+      <h3>Chi siamo</h3>
+      <div class="card">
+        <p>
+          Alienity Racing nasce da una visione condivisa: portare una mentalità futuristica nel mondo endurance.
+          Tecnologia, allenamento mirato e comunicazione trasparente guidano ogni scelta. Siamo un collettivo
+          capace di valorizzare il talento e di trasformare ogni gara in un'esperienza unica.
+        </p>
+      </div>
+    </section>
 
-  <!-- FOOTER -->
+    <section id="classi">
+      <h3>Le nostre Classi</h3>
+      <div class="grid">
+        <article class="card">
+          <span class="badge">HY</span>
+          <h4>Hypercar</h4>
+          <p>
+            La punta di diamante del progetto Alienity. Potenza ibrida, strategie d'avanguardia e team coordination
+            impeccabile per puntare al gradino più alto.
+          </p>
+        </article>
+        <article class="card">
+          <span class="badge">GTE</span>
+          <h4>Grand Touring Endurance</h4>
+          <p>
+            Tecnica e costanza sui lunghi stint. Analisi dati in tempo reale e precisione chirurgica per conquistare
+            ogni settore.
+          </p>
+        </article>
+        <article class="card">
+          <span class="badge">GT3</span>
+          <h4>Gran Turismo</h4>
+          <p>
+            Il laboratorio dei talenti Alienity. Supportiamo i piloti nel percorso di crescita con coaching dedicato e
+            simulazioni continue.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section id="join">
+      <h3>Unisciti alla Missione</h3>
+      <div class="grid">
+        <article class="card">
+          <h4>Invia la tua candidatura</h4>
+          <p>
+            Raccontaci il tuo profilo, le tue esperienze e i tuoi obiettivi. Se il mindset è giusto, sarai contattato
+            per un colloquio con il Team Principal.
+          </p>
+          <a class="btn" href="candidatura.php">Compila il form</a>
+        </article>
+        <article class="card">
+          <h4>Accedi alla tua area</h4>
+          <p>
+            I membri del team possono consultare squadre, brief tecnici e aggiornamenti di gara direttamente dalla
+            dashboard riservata.
+          </p>
+          <a class="btn secondary" href="login.php">Vai al login</a>
+        </article>
+      </div>
+    </section>
+  </main>
+
   <footer>
-    © 2025 Alienity Racing – All Rights Reserved
+    © 2025 Alienity Racing · Le Mans Ultimate Team
   </footer>
 </body>
 </html>
