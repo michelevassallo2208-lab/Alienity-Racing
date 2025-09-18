@@ -118,8 +118,13 @@ form button:hover {
   padding: 20px;
   border-radius: 15px;
   box-shadow: 0 0 10px #00d9ff;
-  margin: 15px auto;
-  max-width: 700px;
+  margin: 20px auto;
+  max-width: 900px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: stretch;
 }
 
 .card h3 {
@@ -443,3 +448,318 @@ button[value="rifiuta"]:hover {
   cursor: pointer;
 }
 
+
+/* LAYOUT DASHBOARD & PAGINE GESTIONE */
+.dashboard-content, .content {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 20px 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.role-chip {
+  align-self: center;
+  padding: 6px 18px;
+  border-radius: 999px;
+  background: rgba(57,255,20,0.15);
+  color: #39ff14;
+  font-size: 0.95rem;
+  letter-spacing: 0.5px;
+}
+
+.card.wide-card {
+  max-width: 100%;
+}
+
+.tabbed-panel {
+  max-width: 100%;
+  text-align: left;
+}
+
+.tab-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.tab-button {
+  padding: 10px 20px;
+  border-radius: 999px;
+  border: 1px solid rgba(57,255,20,0.6);
+  background: rgba(255,255,255,0.05);
+  color: #fff;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.tab-button:hover,
+.tab-button.is-active {
+  background: linear-gradient(45deg, #39ff14, #00d9ff);
+  color: #000;
+  border-color: transparent;
+}
+
+.tab-panels {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.tab-panel {
+  display: none;
+  gap: 20px;
+}
+
+.tab-panel.is-active {
+  display: flex;
+  flex-direction: column;
+}
+
+.panel-description {
+  color: #a8a8c1;
+  margin: 0 auto 10px;
+  max-width: 520px;
+  text-align: center;
+}
+
+.panel-form {
+  width: 100%;
+  max-width: 420px;
+  margin: 0 auto;
+}
+
+.panel-form label {
+  text-align: left;
+  display: block;
+  margin-bottom: 6px;
+  color: #00d9ff;
+}
+
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.data-table {
+  width: 100%;
+  margin: 0;
+  border-collapse: collapse;
+  background: rgba(255,255,255,0.05);
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.data-table th,
+.data-table td {
+  padding: 12px 16px;
+  text-align: left;
+}
+
+.data-table th {
+  background: #ff00ff;
+  color: #fff;
+  letter-spacing: 0.6px;
+}
+
+.data-table tr:nth-child(even) {
+  background: rgba(255,255,255,0.05);
+}
+
+.data-table tr:hover {
+  background: rgba(57,255,20,0.25);
+}
+
+.message-cell {
+  max-width: 320px;
+}
+
+.table-actions {
+  min-width: 220px;
+  text-align: center;
+}
+
+.inline-form {
+  max-width: none;
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  box-shadow: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.inline-form select,
+.inline-form input {
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(57,255,20,0.4);
+  width: 100%;
+}
+
+.inline-form button {
+  width: auto;
+}
+
+.inline-form .button-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.button-group button {
+  flex: 1;
+  min-width: 120px;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 999px;
+  background: linear-gradient(45deg, #39ff14, #ff00ff);
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.button-group button:hover {
+  transform: translateY(-2px);
+}
+
+.button-group .secondary {
+  background: rgba(255,255,255,0.1);
+  border: 1px solid #ff004c;
+  color: #ff7b9c;
+}
+
+.inline-form.stacked {
+  background: rgba(255,255,255,0.05);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(0,217,255,0.3);
+}
+
+.inline-form.stacked button {
+  width: 100%;
+}
+
+.status-chip {
+  display: inline-block;
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  letter-spacing: 0.4px;
+  background: rgba(255,255,255,0.12);
+  color: #fff;
+}
+
+.status-chip.status-in-attesa {
+  background: rgba(255, 170, 0, 0.2);
+  color: #ffdd87;
+}
+
+.status-chip.status-accettata {
+  background: rgba(57,255,20,0.2);
+  color: #39ff14;
+}
+
+.status-chip.status-rifiutata {
+  background: rgba(255,0,70,0.25);
+  color: #ff7894;
+}
+
+.status-note {
+  color: #9aa0b8;
+  font-size: 0.9rem;
+}
+
+.team-card {
+  align-items: center;
+  text-align: center;
+}
+
+.link-button {
+  border: none;
+  background: transparent;
+  color: #39ff14;
+  font-size: 1.2rem;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 8px 18px;
+  border-radius: 999px;
+  transition: all 0.3s ease;
+}
+
+.link-button:hover {
+  background: rgba(57,255,20,0.15);
+  color: #00d9ff;
+}
+
+.collapsible {
+  display: none;
+  width: 100%;
+}
+
+.collapsible.is-visible {
+  display: block;
+}
+
+.team-list {
+  list-style: none;
+  padding: 0;
+  margin: 15px 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.team-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  border-radius: 12px;
+  background: rgba(0,217,255,0.08);
+  backdrop-filter: blur(6px);
+}
+
+.team-member-name {
+  font-weight: 600;
+}
+
+.team-member-role {
+  font-size: 0.85rem;
+  color: #00d9ff;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+}
+
+.empty-state,
+.empty-state-text {
+  color: #a0a7c4;
+  font-style: italic;
+}
+
+@media (max-width: 768px) {
+  .dashboard-content, .content {
+    padding: 30px 16px 60px;
+  }
+
+  .button-group button {
+    min-width: 140px;
+  }
+
+  .message-cell {
+    max-width: 240px;
+  }
+
+  .team-list li {
+    flex-direction: column;
+    gap: 8px;
+    text-align: center;
+  }
+}
