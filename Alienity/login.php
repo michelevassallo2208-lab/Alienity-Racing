@@ -3,7 +3,7 @@ session_start();
 require 'db.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $username = $_POST["username"];
+    $username = trim($_POST["username"]);
     $password = $_POST["password"];
 
     $sql = "SELECT * FROM utenti WHERE username=?";
@@ -19,7 +19,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         header("Location: dashboard.php");
         exit();
     } else {
-        $errore = "Credenziali non valide.";
+        $errore = "Credenziali non valide";
     }
 }
 ?>
@@ -32,16 +32,22 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </head>
 <body>
   <div class="stars"></div>
+  <?php include 'navbar.php'; ?>
+
   <div class="form-container">
-    <img src="logo.png" alt="Alienity Racing Logo" class="form-logo">
-    <h1>Accedi</h1>
-    <?php if (!empty($errore)) echo "<p class='error'>$errore</p>"; ?>
+    <img src="logo.png" alt="Alienity Racing Logo" class="form-logo" style="width:120px;">
+    <h1>Area riservata</h1>
+    <p class="muted">Accedi con le credenziali fornite dal Team Principal.</p>
+    <?php if (!empty($errore)): ?>
+      <p class="error"><?php echo htmlspecialchars($errore); ?></p>
+    <?php endif; ?>
     <form method="POST">
-      <input type="text" name="username" placeholder="Username" required>
-      <input type="password" name="password" placeholder="Password" required>
-      <button type="submit">Entra</button>
+      <label for="username">Username</label>
+      <input id="username" type="text" name="username" placeholder="Il tuo username" required>
+      <label for="password">Password</label>
+      <input id="password" type="password" name="password" placeholder="Password" required>
+      <button type="submit">Accedi</button>
     </form>
-    <p>Non hai un account? <a href="register.php">Registrati</a></p>
   </div>
 </body>
 </html>
